@@ -1,7 +1,7 @@
-package steps;
+package POM_dataPatterns_homework.steps;
 
 import io.qameta.allure.Step;
-import pages.ResultPage;
+import POM_dataPatterns_homework.pages.ResultPage;
 
 import static com.codeborne.selenide.Condition.*;
 

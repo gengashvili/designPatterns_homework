@@ -1,4 +1,4 @@
-package data;
+package POM_dataPatterns_homework.data;
 
 public class FormData {
     public String

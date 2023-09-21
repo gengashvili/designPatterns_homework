@@ -1,16 +1,18 @@
-import data.FormData;
+package POM_dataPatterns_homework;
 
-import steps.FormsSteps;
-import steps.HomeSteps;
-import steps.RegistrationSteps;
-import steps.ResultSteps;
+import POM_dataPatterns_homework.data.FormData;
+
+import POM_dataPatterns_homework.steps.FormsSteps;
+import POM_dataPatterns_homework.steps.HomeSteps;
+import POM_dataPatterns_homework.steps.RegistrationSteps;
+import POM_dataPatterns_homework.steps.ResultSteps;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class FillFormTest extends TestConfig{
+public class FillFormTest extends TestConfig {
     HomeSteps homeSteps = new HomeSteps();
     FormsSteps formsSteps = new FormsSteps();
     RegistrationSteps registrationSteps = new RegistrationSteps();
