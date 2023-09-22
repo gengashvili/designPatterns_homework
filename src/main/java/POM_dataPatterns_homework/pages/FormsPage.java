@@ -1,4 +1,4 @@
-package pages;
+package POM_dataPatterns_homework.pages;
 
 import com.codeborne.selenide.SelenideElement;
 

@@ -1,7 +1,7 @@
-package steps;
+package POM_dataPatterns_homework.steps;
 
 import io.qameta.allure.Step;
-import pages.FormsPage;
+import POM_dataPatterns_homework.pages.FormsPage;
 
 public class FormsSteps {
     FormsPage formsPage = new FormsPage();

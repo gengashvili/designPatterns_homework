@@ -1,3 +1,5 @@
+package POM_dataPatterns_homework;
+
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeSuite;
 

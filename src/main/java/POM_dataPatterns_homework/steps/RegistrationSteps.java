@@ -1,8 +1,8 @@
-package steps;
+package POM_dataPatterns_homework.steps;
 
-import data.FormData;
+import POM_dataPatterns_homework.data.FormData;
 import io.qameta.allure.Step;
-import pages.RegistrationPage;
+import POM_dataPatterns_homework.pages.RegistrationPage;
 
 public class RegistrationSteps {
     FormData formData = new FormData();
