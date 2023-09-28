@@ -44,7 +44,6 @@ public class SwoopTest extends TestConfig{
                 .validatePopUpMovieInfo()
                 .chooseVacantPlace();
 
-        Assert.fail("This test intentionally fails");
     }
 
 }
