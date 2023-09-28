@@ -18,7 +18,7 @@ public class MovieSteps {
         this.moviePage = new MoviePage(driver);
     }
 
-    @Step
+    @Step("choose cavea east point cinema")
     public MovieSteps chooseCaveaEastPointCinema() {
         WebElement caveaLink = moviePage.getCaveaLink();
 
@@ -29,7 +29,7 @@ public class MovieSteps {
         return this;
     }
 
-    @Step
+    @Step("validate ciname name")
     public MovieSteps validateCinemaName() {
         List<WebElement> cinemasOptions = moviePage.getCinemasOptions();
 
@@ -42,7 +42,7 @@ public class MovieSteps {
         return this;
     }
 
-    @Step
+    @Step("click on last seanse date")
     public MovieSteps clickOnLastDate() {
         List<WebElement> seanseDates = moviePage.getSeanseDates();
         WebElement lastDate = seanseDates.get(seanseDates.size() - 1);
@@ -50,7 +50,7 @@ public class MovieSteps {
         return this;
     }
 
-    @Step
+    @Step("click on last cinema option")
     public MovieSteps clickOnLastCinemaOption() {
         List<WebElement> cinemasOptions = moviePage.getLastDayCinemasOptions();
         WebElement lastOption = cinemasOptions.get(cinemasOptions.size() - 1 );
@@ -58,7 +58,8 @@ public class MovieSteps {
         return this;
     }
 
-    @Step public MovieSteps saveMovieInfo() {
+    @Step("save movie info for future validation")
+    public MovieSteps saveMovieInfo() {
         String movieTitle = moviePage.getMovieNameElement().getText();
         String cinemaTitle = moviePage.
                 getLastDayCinemasOptions()

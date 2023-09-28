@@ -1,12 +1,27 @@
 package PageFactory_FluentAPI_homework.PageFactory_and_Fluent_API;
 
+import PageFactory_FluentAPI_homework.Common.ScreenshotListener;
 import PageFactory_FluentAPI_homework.Common.TestConfig;
 import PageFactory_FluentAPI_homework.PageFactory_and_Fluent_API.steps.*;
+import io.qameta.allure.*;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class SwoopTest extends TestConfig {
 
-    @Test
+@Epic("swoop test")
+@Feature("swoop web site test feature")
+@Listeners({ScreenshotListener.class})
+public class SwoopTest extends TestConfig{
+
+    @Test(description = "swoop test main method")
+    @Description(
+            "open swoop, navigate to movies page, \n" +
+            "select first movie that has cavea east point cinema option,\n" +
+            "choose last date, last cinema and choose vacant place.\n" +
+            "in last validate popup and real movie data")
+    @Story("test to validate swoop story")
+    @Severity(SeverityLevel.BLOCKER)
     public void swoopTest() {
         HomeSteps homeSteps = new HomeSteps(driver);
         EventsSteps eventsSteps = new EventsSteps(driver);
@@ -16,7 +31,7 @@ public class SwoopTest extends TestConfig {
 
         homeSteps.navigateToEventsPage();
 
-        eventsSteps.selectAndClickOnFirstMovie();
+        eventsSteps.selectAndClickOnFirstMovie("cavea-istFointi");
 
         movieSteps
                 .chooseCaveaEastPointCinema()
@@ -29,5 +44,7 @@ public class SwoopTest extends TestConfig {
                 .validatePopUpMovieInfo()
                 .chooseVacantPlace();
 
+        Assert.fail("This test intentionally fails");
     }
+
 }

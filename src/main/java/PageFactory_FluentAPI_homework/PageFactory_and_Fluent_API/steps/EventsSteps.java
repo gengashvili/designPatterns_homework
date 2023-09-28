@@ -17,8 +17,9 @@ public class EventsSteps {
         this.eventsPage = new EventsPage(driver);
     }
 
-    @Step
-    public EventsSteps selectAndClickOnFirstMovie() {
+
+    @Step("select first movie that has : {cinemaName} cinema and click it")
+    public EventsSteps selectAndClickOnFirstMovie(String cinemaName) {
         List<WebElement> moviesList = eventsPage.moviesList;
 
         Actions actions = new Actions(driver);
@@ -29,7 +30,7 @@ public class EventsSteps {
             List<WebElement> movieLogos = movie.findElements(By.xpath(".//div[@class='movie-logos']//img"));
 
             for (WebElement logo : movieLogos) {
-                if (logo.getAttribute("src").contains("cavea-istFointi")) {
+                if (logo.getAttribute("src").contains(cinemaName)) {
 
                     actions.moveToElement(movie).perform();
                     WebElement buyButton = movie.findElement(By.xpath(".//div[@class='cinema-hover']/a[div[@class='info-cinema-ticket']]"));
