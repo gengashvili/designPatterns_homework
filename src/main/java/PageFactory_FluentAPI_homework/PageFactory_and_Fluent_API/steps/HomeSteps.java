@@ -13,7 +13,7 @@ public class HomeSteps {
         homePage = new HomePage(driver);
     }
 
-    @Step
+    @Step("navigate to events page")
     public HomeSteps navigateToEventsPage() {
         homePage.kinoLink.click();
         return this;

@@ -18,7 +18,7 @@ public class PopUpSteps {
         this.popUpPage = new PopUpPage(driver);
     }
 
-    @Step
+    @Step("validate pop up movie info")
     public PopUpSteps validatePopUpMovieInfo() {
 
         String popUpMovieTitle = popUpPage.getMovieTitle().getText();
@@ -34,7 +34,7 @@ public class PopUpSteps {
         return this;
     }
 
-    @Step
+    @Step("choose vacant place")
     public PopUpSteps chooseVacantPlace() {
         popUpPage.getVacantPlaces().get(0).click();
         return this;

@@ -36,8 +36,4 @@ public class SwoopTest extends TestConfig {
     }
 
 
-    @AfterMethod
-    public void tearDown() {
-        //driver.quit();
-    }
 }
